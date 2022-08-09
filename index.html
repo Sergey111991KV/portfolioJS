@@ -3,16 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <style src></style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header></header>
+  <header>
+      <p>JS</p>
+  </header>
   <section>
-    <h3>Prototypes</h3>
+      <div class="container">
+          <h3>Var, Let and Const</h3>
+      </div>
   </section>
   <section>
-      <h3>Closures</h3>
-      <pre>
+      <div class="container">
+          <h3>Prototypes</h3>
+      </div>
+  </section>
+  <section>
+      <div class="container">
+          <h3>Closures</h3>
+          <pre>
         <code>
           function makeCounter() {
             let count = 0;
@@ -25,38 +35,55 @@
           let counter = makeCounter();
         </code>
       </pre>
+      </div>
   </section>
   <section>
-    <h3>Memoization</h3>
+      <div class="container">
+          <h3>Memoization</h3>
+          <div class="buttons__container">
+
+              <input>
+              <button id="simple_memoize">Memoization</button>
+              <button id="simple_not_memoize">Not Memoization</button>
+
+              <input>
+              <button id="recursion_memoize">Memoization</button>
+              <button id="recursion_not_memoize">Not Memoization</button>
+
+              <button id="memoize">Start</button>
+          </div>
+      </div>
   </section>
   <section>
-      <h3>Useful Functions</h3>
+      <div class="container">
+          <h3>Useful Functions</h3>
 
-      <ul>
-          <li>
-              <h5>Debounce</h5>
-              <p>Add timeout, when to do actions. For example: request to server, when you write in input</p>
-              <div>
-                  <label for="input_debounce">input_debounce</label>
-                  <input id="input_debounce">
-              </div>
-              <div>
-                  <label for="input_not_debounce">input_not_debounce</label>
-                  <input id="input_not_debounce">
-              </div>
-          </li>
-          <li>
-              <h5>Throttle</h5>
-              <div class="throttle__buttons">
-                  <button id="throttle_open">Start Throttle</button>
-                  <button id="throttle_open_without">Start Without Throttle</button>
-                  <button id="throttle_close">Close</button>
-              </div>
+          <ul>
+              <li>
+                  <h5>Debounce</h5>
+                  <p>Add timeout, when to do actions. For example: request to server, when you write in input</p>
+                  <div>
+                      <label for="input_debounce">input_debounce</label>
+                      <input id="input_debounce">
+                  </div>
+                  <div>
+                      <label for="input_not_debounce">input_not_debounce</label>
+                      <input id="input_not_debounce">
+                  </div>
+              </li>
+              <li>
+                  <h5>Throttle</h5>
+                  <div class="buttons__container">
+                      <button id="throttle_open">Start Throttle</button>
+                      <button id="throttle_open_without">Start Without Throttle</button>
+                      <button id="throttle_close">Close</button>
+                  </div>
 
-          </li>
-      </ul>
-      <duv id="log"></duv>
-      <button id="log-clear">Clear console</button>
+              </li>
+          </ul>
+          <duv id="log"></duv>
+          <button id="log-clear">Clear console</button>
+      </div>
   </section>
     <script src="console.js"></script>
     <script src="index.js"></script>

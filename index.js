@@ -2,18 +2,42 @@ function factorial(n) {
     return n != 1 ? n * factorial(n -1) : 1
 }
 
-function memoize (fn) {
-    console.log(arguments)
-    // let cash = {}
-    // return (...arg) => {
-    //     console.log(arg)
-    //     let n = arg[0]
-    // }
+const memoize = (fn) => {
+    let cash = {}
+    return (...arg) => {
+        let n = arg[0]
+        if (n in cash) {
+            console.log('Fetching from cache');
+            return cash[n]
+        } else{
+            console.log('Calculating result');
+            let result = fn(n)
+            cash[n] = result
+            return  result
+        }
+    }
 }
 
-// memoize( 3)
+const add = (n) => (n + 10);
+const memoizedAdd = memoize(add);
+// console.log(memoizedAdd(3));  // вычислено
+// console.log(memoizedAdd(3));  // взято из кэша
 
 
+const factorialMemo = memoize(
+    (x) => {
+    if (x === 0) {
+        return 1
+    }
+    else {
+        return x * factorialMemo(x-1)
+    }
+})
+
+factorialMemo(4)
+factorialMemo(4)
+
+factorialMemo(9)
 
 //Useful Functions
 

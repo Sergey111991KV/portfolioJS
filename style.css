@@ -1,5 +1,19 @@
-.throttle__buttons{
+.buttons__container{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+header{
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 20px;
+    background-color: #ffd21a;
+    font-size: 30px;
+}
+
+.container{
+    padding: 0 20px;
 }
