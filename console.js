@@ -1,5 +1,6 @@
 //Console.log div
 //Create show console.log div
+console.log('console.log js file is added')
 (function () {
     var old = console.log;
     var logger = document.getElementById('log');

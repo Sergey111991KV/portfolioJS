@@ -11,17 +11,32 @@
   </header>
   <section>
       <div class="container">
-          <h3>Var, Let and Const</h3>
+          <h3 class="section_title">Navigation</h3>
+          <div>
+              <a href="#variables">Variables</a>
+              <a href="#prototypes">Prototypes</a>
+              <a href="#closures">Closures</a>
+              <a href="#memoization">Memoization</a>
+              <a href="#usefull">Useful Functions</a>
+              <a href="#cors">CORS</a>
+          </div>
       </div>
   </section>
-  <section>
+  <section id="variables">
       <div class="container">
+          <h3 class="section_title">variables</h3>
+          <h3 class="section_title">Var, Let and Const</h3>
+      </div>
+  </section>
+  <section id="prototypes">
+      <div class="container">
+          <h3 class="section_title">Prototypes</h3>
           <h3>Prototypes</h3>
       </div>
   </section>
-  <section>
+  <section id="closures">
       <div class="container">
-          <h3>Closures</h3>
+          <h3 class="section_title">Closures</h3>
           <pre>
         <code>
           function makeCounter() {
@@ -37,9 +52,9 @@
       </pre>
       </div>
   </section>
-  <section>
+  <section id="memoization">
       <div class="container">
-          <h3>Memoization</h3>
+          <h3 class="section_title">Memoization</h3>
           <div class="buttons__container">
 
               <input>
@@ -54,9 +69,9 @@
           </div>
       </div>
   </section>
-  <section>
+  <section id="usefull">
       <div class="container">
-          <h3>Useful Functions</h3>
+          <h3 class="section_title">Useful Functions</h3>
 
           <ul>
               <li>
@@ -85,7 +100,22 @@
           <button id="log-clear">Clear console</button>
       </div>
   </section>
-    <script src="console.js"></script>
+  <section id="cors">
+      <div class="container">
+          <h3 class="section_title">CORS</h3>
+          <div>
+              <div>
+                  <p>1. Blocked request https://ipinfo.io</p>
+                  <p id="cors_content_first_step_empty"></p>
+                  <p id="cors_content_first_step_cors"></p>
+                  <p id="cors_content_first_step_no-cors"></p>
+              </div>
+          </div>
+      </div>
+  </section>
+
     <script src="index.js"></script>
+    <script src="console.js"></script>
+    <script src="cors.js"></script>
 </body>
 </html>
