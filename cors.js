@@ -4,46 +4,46 @@ var firstStepCors = document.getElementById('cors_content_first_step_cors');
 var firstStepNoCors = document.getElementById('cors_content_first_step_no-cors');
 
 
-fetch('https://ipinfo.io', )
-    .then((response) => {
-        console.log('cors', response);
-        return response;
-    })
-    .then((data) => {
-        firstStepEmpty.innerHTML += data.type + ' ' + data.status;
-        console.log(data);
-    })
-    .catch((error) => {
-        firstStepEmpty.innerHTML += error;
-        console.log(error)
-    })
+// fetch('https://ipinfo.io/json?token=29e18b8a0ccc9d', )
+//     .then((response) => {
+//         console.log('cors', response);
+//         return response;
+//     })
+//     .then((data) => {
+//         firstStepEmpty.innerHTML += data.type + ' ' + data.status;
+//         console.log(data);
+//     })
+//     .catch((error) => {
+//         firstStepEmpty.innerHTML += error;
+//         console.log(error)
+//     })
 
-fetch('https://ipinfo.io', {
-    mode: 'no-cors'
-})
-    .then((response) => {
-        console.log('cors', response);
-        return response;
-    })
-    .then((data) => {
-        firstStepCors.innerHTML += data.type + ' ' + data.status;
-        console.log(data);
-    })
-    .catch((error) => {
-        firstStepCors.innerHTML += error;
-        console.log(error)
-    })
-
-fetch('https://ipinfo.io', {
+// fetch('https://ipinfo.io/json', {
+//     mode: 'no-cors'
+// })
+//     .then((response) => {
+//         console.log('cors', response);
+//         return response;
+//     })
+//     .then((data) => {
+//         firstStepCors.innerHTML += data.type + ' ' + data.status;
+//         console.log(data);
+//     })
+//     .catch((error) => {
+//         firstStepCors.innerHTML += error;
+//         console.log(error)
+//     })
+//
+fetch('https://ipinfo.io/json?token=29e18b8a0ccc9d', {
     mode: 'cors'
 })
     .then((response) => {
         console.log('cors', response);
-        return response;
+        return response.json();
     })
     .then((data) => {
-        firstStepNoCors.innerHTML += data.type + ' ' + data.status;
         console.log(data);
+        firstStepNoCors.innerHTML += data.city + ' ' + data.hostname;
     })
     .catch((error) => {
         firstStepNoCors.innerHTML += error;
