@@ -4,40 +4,108 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
-  <header>
-      <p>JS</p>
-  </header>
-  <section>
-      <div class="container">
-          <h3 class="section_title">Navigation</h3>
-          <div>
-              <a href="#variables">Variables</a>
-              <a href="#prototypes">Prototypes</a>
-              <a href="#closures">Closures</a>
-              <a href="#memoization">Memoization</a>
-              <a href="#usefull">Useful Functions</a>
-              <a href="#cors">CORS</a>
-          </div>
-      </div>
-  </section>
-  <section id="variables">
-      <div class="container">
-          <h3 class="section_title">variables</h3>
-          <h3 class="section_title">Var, Let and Const</h3>
-      </div>
-  </section>
-  <section id="prototypes">
-      <div class="container">
-          <h3 class="section_title">Prototypes</h3>
-          <h3>Prototypes</h3>
-      </div>
-  </section>
-  <section id="closures">
-      <div class="container">
-          <h3 class="section_title">Closures</h3>
-          <pre>
+<div id="navigation" class="navigation">
+    <ul>
+        <li class="list">
+            <a href="#navigation">
+                JS
+            </a>
+        </li>
+        <li class="list">
+            <a href="#variables">
+                <span class="icon"><ion-icon name="code-working-outline"></ion-icon></span>
+                <span class="title">Variables</span>
+            </a>
+        </li>
+        <li class="list">
+            <a href="#prototypes">
+                <span class="icon"><ion-icon name="code-slash-outline"></ion-icon></span>
+                <span class="title">Prototypes</span>
+            </a>
+        </li>
+        <li class="list">
+            <a href="#closures">
+                <span class="icon"><ion-icon name="code-working-outline"></ion-icon></span>
+                <span class="title">Closures</span>
+            </a>
+        </li>
+        <li class="list">
+            <a href="#memoization">
+                <span class="icon"><ion-icon name="code-download-outline"></ion-icon></span>
+                <span class="title">Memoization</span>
+            </a>
+        </li>
+        <li class="list">
+            <a href="#usefull">
+                <span class="icon"><ion-icon name="code-outline"></ion-icon></span>
+                <span class="title">Useful Functions</span>
+            </a>
+        </li>
+        <li class="list">
+            <a href="#cors">
+                <span class="icon"><ion-icon name="planet-outline"></ion-icon></span>
+                <span class="title">CORS</span>
+            </a>
+        </li>
+        <li class="list">
+            <a href="#spread">
+                <span class="icon"><ion-icon name="code-working-outline"></ion-icon></span>
+                <span class="title">Spread</span>
+            </a>
+        </li>
+        <li class="list">
+            <a href="#good_practice">
+                <span class="icon"><ion-icon name="laptop-outline"></ion-icon></span>
+                <span class="title">Good practice</span>
+            </a>
+        </li>
+        <li class="list">
+            <a href="#site-settings">
+                <span class="icon"><ion-icon name="cog-outline"></ion-icon></span>
+                <span class="title">Site settings</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<!--<header>-->
+<!--    <p>JS</p>-->
+<!--</header>-->
+<!--<section>-->
+<!--    <div class="container">-->
+<!--        <h3 class="section_title">Navigation</h3>-->
+<!--        <div>-->
+<!--            <a href="#variables">Variables</a>-->
+<!--            <a href="#prototypes">Prototypes</a>-->
+<!--            <a href="#closures">Closures</a>-->
+<!--            <a href="#memoization">Memoization</a>-->
+<!--            <a href="#usefull">Useful Functions</a>-->
+<!--            <a href="#cors">CORS</a>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</section>-->
+
+<main>
+    <section id="variables">
+        <div class="container">
+            <h3 class="section_title">variables</h3>
+            <h3 class="section_title">Var, Let and Const</h3>
+        </div>
+    </section>
+    <section id="prototypes">
+        <div class="container">
+            <h3 class="section_title">Prototypes</h3>
+            <h3>Prototypes</h3>
+        </div>
+    </section>
+    <section id="closures">
+        <div class="container">
+            <h3 class="section_title">Closures</h3>
+            <pre>
         <code>
           function makeCounter() {
             let count = 0;
@@ -50,73 +118,127 @@
           let counter = makeCounter();
         </code>
       </pre>
-      </div>
-  </section>
-  <section id="memoization">
-      <div class="container">
-          <h3 class="section_title">Memoization</h3>
-          <div class="buttons__container">
+        </div>
+    </section>
+    <section id="memoization">
+        <div class="container">
+            <h3 class="section_title">Memoization</h3>
+            <div class="buttons__container">
 
-              <input>
-              <button id="simple_memoize">Memoization</button>
-              <button id="simple_not_memoize">Not Memoization</button>
+                <input>
+                <button id="simple_memoize">Memoization</button>
+                <button id="simple_not_memoize">Not Memoization</button>
 
-              <input>
-              <button id="recursion_memoize">Memoization</button>
-              <button id="recursion_not_memoize">Not Memoization</button>
+                <input>
+                <button id="recursion_memoize">Memoization</button>
+                <button id="recursion_not_memoize">Not Memoization</button>
 
-              <button id="memoize">Start</button>
-          </div>
-      </div>
-  </section>
-  <section id="usefull">
-      <div class="container">
-          <h3 class="section_title">Useful Functions</h3>
+                <button id="memoize">Start</button>
+            </div>
+        </div>
+    </section>
+    <section id="usefull">
+        <div class="container">
+            <h3 class="section_title">Useful Functions</h3>
 
-          <ul>
-              <li>
-                  <h5>Debounce</h5>
-                  <p>Add timeout, when to do actions. For example: request to server, when you write in input</p>
-                  <div>
-                      <label for="input_debounce">input_debounce</label>
-                      <input id="input_debounce">
-                  </div>
-                  <div>
-                      <label for="input_not_debounce">input_not_debounce</label>
-                      <input id="input_not_debounce">
-                  </div>
-              </li>
-              <li>
-                  <h5>Throttle</h5>
-                  <div class="buttons__container">
-                      <button id="throttle_open">Start Throttle</button>
-                      <button id="throttle_open_without">Start Without Throttle</button>
-                      <button id="throttle_close">Close</button>
-                  </div>
+            <ul>
+                <li>
+                    <h5>Debounce</h5>
+                    <p>Add timeout, when to do actions. For example: request to server, when you write in input</p>
+                    <div>
+                        <label for="input_debounce">input_debounce</label>
+                        <input id="input_debounce">
+                    </div>
+                    <div>
+                        <label for="input_not_debounce">input_not_debounce</label>
+                        <input id="input_not_debounce">
+                    </div>
+                </li>
+                <li>
+                    <h5>Throttle</h5>
+                    <div class="buttons__container">
+                        <button id="throttle_open">Start Throttle</button>
+                        <button id="throttle_open_without">Start Without Throttle</button>
+                        <button id="throttle_close">Close</button>
+                    </div>
 
-              </li>
-          </ul>
-          <duv id="log"></duv>
-          <button id="log-clear">Clear console</button>
-      </div>
-  </section>
-  <section id="cors">
-      <div class="container">
-          <h3 class="section_title">CORS</h3>
-          <div>
-              <div>
-                  <p>1. Blocked request https://ipinfo.io</p>
-                  <p id="cors_content_first_step_empty"></p>
-                  <p id="cors_content_first_step_cors"></p>
-                  <p id="cors_content_first_step_no-cors"></p>
-              </div>
-          </div>
-      </div>
-  </section>
+                </li>
+            </ul>
+            <duv id="log"></duv>
+            <button id="log-clear">Clear console</button>
+        </div>
+    </section>
+    <section id="cors">
+        <div class="container">
+            <h3 class="section_title">CORS</h3>
+            <div>
+                <div>
+                    <p>1. Blocked request https://ipinfo.io</p>
+                    <p id="cors_content_first_step_empty"></p>
+                    <p id="cors_content_first_step_cors"></p>
+                    <p id="cors_content_first_step_no-cors"></p>
+                </div>
+            </div>
+            <div>
+                <div>
+                    Some way to bypass blocking
+                </div>
+                function gotWeather({ temperature, humidity }) {
+                alert(`температура: ${temperature}, влажность: ${humidity}`);
+                }
+
+                let script = document.createElement('script');
+                script.src = `https://ipinfo.io/json?token=29e18b8a0ccc9d`;
+                document.body.append(script);
+            </div>
+        </div>
+    </section>
+    <section id="spread">
+        <div class="container">
+            <h3 class="section_title">Spread</h3>
+            <textarea id="spread_textarea" placeholder="Put object">
+
+          </textarea>
+            <div>
+                const obj = <span id="spread__object"></span>
+            </div>
+
+            <div>
+                <title>Добавление свойств</title>
+                <title>Добавьте строку свойства</title>
+                <div>
+                    const new_obj = { ...user, <span id="spread__object__add_property"></span> }
+                </div>
+                <textarea id="spread_textarea__add_property" placeholder="Add property object"></textarea>
+            </div>
+        </div>
+    </section>
+    <section id="good_practice">
+        <div class="bad_practice_container">
+            function getStatus(status) {
+            if(status === true) {
+            return 'OK'
+            } else {
+            return 'Bad'
+            }
+            }
+        </div>
+        <div class="good_practice_container">
+            function getStatus(status) {
+            return status ? 'OK' : 'Bad'
+            }
+        </div>
+    </section>
+    <section id="site-settings">
+        <p>Page zoom</p>
+        <div id="zoom"></div>
+    </section>
+
+</main>
 
 <!--  <script>alert(document.cookie)</script>-->
     <script src="index.js"></script>
     <script src="console.js"></script>
     <script src="cors.js"></script>
+    <script src="spread.js"></script>
 </body>
-</html>
