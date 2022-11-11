@@ -11,59 +11,80 @@
 <div id="navigation" class="navigation">
     <ul>
         <li class="list">
-            <a href="#navigation">
-                JS
+            <b></b>
+            <b></b>
+            <a href="#start">
+                <span class="icon main">JS</span>
+                <span class="title main">Java Script</span>
             </a>
         </li>
-        <li class="list">
+        <li class="list active">
+            <b></b>
+            <b></b>
             <a href="#variables">
                 <span class="icon"><ion-icon name="code-working-outline"></ion-icon></span>
                 <span class="title">Variables</span>
             </a>
         </li>
         <li class="list">
+            <b></b>
+            <b></b>
             <a href="#prototypes">
                 <span class="icon"><ion-icon name="code-slash-outline"></ion-icon></span>
                 <span class="title">Prototypes</span>
             </a>
         </li>
         <li class="list">
+            <b></b>
+            <b></b>
             <a href="#closures">
                 <span class="icon"><ion-icon name="code-working-outline"></ion-icon></span>
                 <span class="title">Closures</span>
             </a>
         </li>
         <li class="list">
+            <b></b>
+            <b></b>
             <a href="#memoization">
                 <span class="icon"><ion-icon name="code-download-outline"></ion-icon></span>
                 <span class="title">Memoization</span>
             </a>
         </li>
         <li class="list">
+            <b></b>
+            <b></b>
             <a href="#usefull">
                 <span class="icon"><ion-icon name="code-outline"></ion-icon></span>
                 <span class="title">Useful Functions</span>
             </a>
         </li>
         <li class="list">
+            <b></b>
+            <b></b>
             <a href="#cors">
                 <span class="icon"><ion-icon name="planet-outline"></ion-icon></span>
                 <span class="title">CORS</span>
             </a>
         </li>
         <li class="list">
+            <b></b>
+            <b></b>
             <a href="#spread">
                 <span class="icon"><ion-icon name="code-working-outline"></ion-icon></span>
                 <span class="title">Spread</span>
             </a>
         </li>
         <li class="list">
+            <b></b>
+            <b></b>
             <a href="#good_practice">
                 <span class="icon"><ion-icon name="laptop-outline"></ion-icon></span>
                 <span class="title">Good practice</span>
             </a>
         </li>
         <li class="list">
+            <b></b>
+            <b></b>
             <a href="#site-settings">
                 <span class="icon"><ion-icon name="cog-outline"></ion-icon></span>
                 <span class="title">Site settings</span>
@@ -71,7 +92,10 @@
         </li>
     </ul>
 </div>
-
+<div id="menu-toggle" class="toggle">
+    <ion-icon name="menu-outline" class="open"></ion-icon>
+    <ion-icon name="close-outline" class="close"></ion-icon>
+</div>
 <!--<header>-->
 <!--    <p>JS</p>-->
 <!--</header>-->
@@ -89,7 +113,12 @@
 <!--    </div>-->
 <!--</section>-->
 
-<main>
+<main id="main">
+    <section id="start">
+        <div class="container">
+            <h3 class="section_title">It's my js knowledge block</h3>
+        </div>
+    </section>
     <section id="variables">
         <div class="container">
             <h3 class="section_title">variables</h3>
@@ -196,21 +225,125 @@
     <section id="spread">
         <div class="container">
             <h3 class="section_title">Spread</h3>
-            <textarea id="spread_textarea" placeholder="Put object">
-
-          </textarea>
-            <div>
-                const obj = <span id="spread__object"></span>
+            <div class="section_title_block">
+                <h4>Add property</h4>
+                <p>const user = { id: 100, name: 'Howard Moon'}</p>
+                <p>const userWithPass = { ...user, password: 'Password!' }</p>
             </div>
 
-            <div>
-                <title>Добавление свойств</title>
-                <title>Добавьте строку свойства</title>
-                <div>
-                    const new_obj = { ...user, <span id="spread__object__add_property"></span> }
-                </div>
-                <textarea id="spread_textarea__add_property" placeholder="Add property object"></textarea>
+            <div class="section_title_block">
+                <h4>Merge objects</h4>
+                <p>const part1 = { id: 100, name: 'Howard Moon' }</p>
+                <p>const part2 = { id: 100, password: 'Password!' }</p>
+                <p>const user1 = { ...part1, ...part2 }</p>
             </div>
+
+
+            <div class="section_title_block">
+                <h4>Delete property</h4>
+                <p>const noPassword = ({ password, ...rest }) => rest</p>
+                <p>const user = {
+                    id: 100,
+                    name: 'Howard Moon',
+                    password: 'Password!'
+                    }</p>
+                <p>noPassword(user) //=> { id: 100, name: 'Howard moon' }</p>
+            </div>
+
+            <div class="section_title_block">
+                <h4>Dynamic Delete property</h4>
+                <p>const user1 = {
+                    id: 100,
+                    name: 'Howard Moon',
+                    password: 'Password!'
+                    }</p>
+                <p>const removeProperty = prop => ({ [prop]: _, ...rest }) => rest
+
+
+                   </p>
+                <p>const removePassword = removeProperty('password')</p>
+                <p>removePassword(user1) //=> { id: 100, name: 'Howard Moon' }</p>
+            </div>
+
+            <div class="section_title_block">
+                <h4>Sort properties</h4>
+                <p>const user3 = {
+                    password: 'Password!',
+                    name: 'Naboo',
+                    id: 300
+                    }</p>
+                <p>const organize = object => ({ id: undefined, ...object })</p>
+                <p>//  move id to the first property</p>
+                <p>organize(user3)
+                    //=> { id: 300, password: 'Password!', name: 'Naboo' }</p>
+            </div>
+
+            <div class="section_title_block">
+                <h4>Default property</h4>
+                <p>const user2 = {
+                    id: 200,
+                    name: 'Vince Noir'
+                    }
+                </p>
+                <p>const user4 = {
+                    id: 400,
+                    name: 'Bollo',
+                    quotes: ["I've got a bad feeling about this..."]
+                    }</p>
+                <p>const setDefaults = ({ quotes = [], ...object}) =>
+                    ({ ...object, quotes })</p>
+                <p>setDefaults(user2)
+                    //=> { id: 200, name: 'Vince Noir', quotes: [] }</p>
+                <p>setDefaults(user4)
+                    //=> {
+                      id: 400,
+                       name: 'Bollo',
+                      quotes: ["I've got a bad feeling about this..."]
+                     }</p>
+                <p></p>
+                <p></p>
+            </div>
+
+            <div class="section_title_block">
+                <h4>Rename property</h4>
+                <p>const renamed = ({ ID, ...object }) => ({ id: ID, ...object })</p>
+                <p>const user = {
+                    ID: 500,
+                    name: "Bob Fossil"
+                    }</p>
+                <p>renamed(user) //=> { id: 500, name: 'Bob Fossil' }</p>
+            </div>
+
+            <div class="section_title_block">
+                <h4>Add property with condition</h4>
+                <p>const user = { id: 100, name: 'Howard Moon' }</p>
+                <p>const password = 'Password!'</p>
+                <p>const userWithPassword = {
+                    ...user,
+                    id: 100,
+                    ...(password && { password })
+                    }</p>
+                <p>userWithPassword //=> { id: 100, name: 'Howard Moon', password: 'Password!' }</p>
+            </div>
+
+            <div class="section_title_block">
+                In the future - need to add property with obj property params and add interactive example
+            </div>
+
+<!--            interactive block -->
+<!--            <textarea id="spread_textarea" placeholder="Put object"></textarea>-->
+<!--            <div>-->
+<!--                const obj = <span id="spread__object"></span>-->
+<!--            </div>-->
+
+<!--            <div>-->
+<!--                <title>Добавление свойств</title>-->
+<!--                <title>Добавьте строку свойства</title>-->
+<!--                <div>-->
+<!--                    const new_obj = { ...user, <span id="spread__object__add_property"></span> }-->
+<!--                </div>-->
+<!--                <textarea id="spread_textarea__add_property" placeholder="Add property object"></textarea>-->
+<!--            </div>-->
         </div>
     </section>
     <section id="good_practice">
@@ -238,6 +371,7 @@
 
 <!--  <script>alert(document.cookie)</script>-->
     <script src="index.js"></script>
+    <script src="js/navigation.js"></script>
     <script src="console.js"></script>
     <script src="cors.js"></script>
     <script src="spread.js"></script>

@@ -173,13 +173,13 @@ parseQuery('pipedrive-domain=test&domain=www.google.com')
 // }
 
 
-setInterval(() => {
-    console.log(Math.round((window.outerWidth / window.innerWidth) * 100))
-    var zoom = document.getElementById('zoom');
-    zoom.innerText = Math.round((window.outerWidth / window.innerWidth) * 100)
-}, 500)
-
-console.log('hi')
+// setInterval(() => {
+//     console.log(Math.round((window.outerWidth / window.innerWidth) * 100))
+//     var zoom = document.getElementById('zoom');
+//     zoom.innerText = Math.round((window.outerWidth / window.innerWidth) * 100)
+// }, 500)
+//
+// console.log('hi')
 
 
 
